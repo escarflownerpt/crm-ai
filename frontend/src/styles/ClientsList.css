@@ -1,0 +1,184 @@
+/* Lista de Clientes */
+.clients-list {
+  animation: fadeIn 0.3s ease;
+}
+
+.clients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.clients-header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.btn-add {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 10px 16px;
+}
+
+/* Formulário de Cliente */
+.client-form {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.form-row input,
+.form-row select {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.btn-save {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 10px 16px;
+}
+
+.btn-cancel {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 10px 16px;
+}
+
+/* Filtros */
+.clients-filters {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.filter {
+  background: white;
+  border: 2px solid #e0e0e0;
+  color: #666;
+  padding: 10px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter:hover {
+  border-color: #667eea;
+  color: #667eea;
+  transform: none;
+}
+
+.filter.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+/* Tabela de Clientes */
+.clients-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clients-table .table {
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.btn-action {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 6px 10px;
+  margin-right: 5px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+  background-color: #667eea;
+  color: white;
+  transform: none;
+}
+
+.btn-action.btn-danger {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.btn-action.btn-danger:hover {
+  background-color: #c62828;
+  color: white;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .clients-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-filters {
+    flex-wrap: wrap;
+  }
+
+  .filter {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 10px;
+  }
+
+  .btn-action {
+    padding: 4px 8px;
+    font-size: 10px;
+    margin-right: 3px;
+  }
+}
